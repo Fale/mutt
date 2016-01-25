@@ -1,0 +1,33 @@
+# vim: set ft=muttrc:
+
+# Do not ask for permission to delete every time
+set delete = yes
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set move = no
+set include
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+alternative_order text/plain text/html *
+auto_view text/html
+bind editor <Tab> complete-query
+bind editor ^T complete
+bind editor <space> noop
+
+# This puts cursor just above signature... the right place, but not common practice.
+# set editor = 'vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
+set editor = 'vim'
+
+# Include all GPG configs
+source ~/.mutt/gpg
+
+# Include gmail account configurations
+source ~/.mutt/gmailacc
+
+# Include sidebar configurations
+#source ~/.mutt/sidebar

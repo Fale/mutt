@@ -1,0 +1,19 @@
+# vim: set ft=muttrc:
+
+set imap_user = "fabiolocati@gmail.com"
+set smtp_url = "smtp://fabiolocati@smtp.gmail.com:587/"
+set from = "fabiolocati@gmail.com"
+set realname = "Fabio Alessandro Locati"
+set signature = ~/.mutt/gmailsig
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set imap_check_subscribed
+set hostname = gmail.com
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+set postponed = "+[GMail]/Drafts"
+
+# Include the _prv that only has imap_pass and smtp_pass
+source ~/.mutt/gmailacc_prv
