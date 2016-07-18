@@ -27,7 +27,65 @@ set editor = 'vim'
 source ~/.mutt/gpg
 
 # Include gmail account configurations
-source ~/.mutt/gmailacc
+#source ~/.mutt/faleacc
+#source ~/.mutt/opensecacc
+#source ~/.mutt/gmailacc
 
 # Include sidebar configurations
-#source ~/.mutt/sidebar
+source ~/.mutt/sidebar
+
+set mbox_type   = Maildir
+set sendmail    = /usr/bin/msmtp
+
+set folder = ~/.mail
+
+set pager_context=1
+set pager_index_lines=8
+
+#set spoolfile   = "+INBOX"
+#set mbox        = "+[Gmail]/All Mail"
+#set postponed   = "+[Gmail]/Drafts"
+unset record
+
+mailboxes = +"fale/Inbox"
+mailboxes = +"fale/Archive"
+mailboxes = +"fale/Drafts"
+mailboxes = +"fale/Sent"
+mailboxes = +"fale/Spam"
+mailboxes = +"fale/Trash"
+mailboxes = +"gmail/Inbox"
+mailboxes = +"gmail/OSMF"
+mailboxes = +"gmail/UniMi"
+mailboxes = +"redhat/Inbox"
+mailboxes = +"redhat/Announces"
+mailboxes = +"redhat/Bugzilla"
+mailboxes = +"redhat/emea-soe-practices"
+mailboxes = +"redhat/FAB-list"
+mailboxes = +"redhat/Fedora-Commops"
+mailboxes = +"redhat/Fedora-Devel"
+mailboxes = +"redhat/Fedora-Devel-Announcements"
+mailboxes = +"redhat/Fedora-Flock-Atendees"
+mailboxes = +"redhat/Fedora-Flock-Speakers"
+mailboxes = +"redhat/Fedora-G11N"
+mailboxes = +"redhat/Fedora-G11N-IT"
+mailboxes = +"redhat/Fedora-Infra"
+mailboxes = +"redhat/Fedora-Marketing"
+mailboxes = +"redhat/LCY-list"
+mailboxes = +"redhat/MEMO"
+mailboxes = +"redhat/RHEV-tech"
+mailboxes = +"redhat/RHOS-tech"
+mailboxes = +"redhat/Tech-list"
+mailboxes = +"redhat/UKI-Consulting"
+mailboxes = +"redhat/UKI-list"
+mailboxes = +"redhat/UKI-Services"
+
+macro index D \
+    "<save-message>+[Gmail]/Trash<enter>" \
+    "move message to the trash"
+
+macro index S \
+    "<save-message>+[Gmail]/Spam<enter>" \
+    "mark message as spam"
+
+alias tc Tracy Corkett <tracy@redhat.com>
+alias tsumi Andrea Boero <mail@tsumi.it>
