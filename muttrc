@@ -86,6 +86,3 @@ macro index D \
 macro index S \
     "<save-message>+[Gmail]/Spam<enter>" \
     "mark message as spam"
-
-alias tc Tracy Corkett <tracy@redhat.com>
-alias tsumi Andrea Boero <mail@tsumi.it>
