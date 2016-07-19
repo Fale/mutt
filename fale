@@ -1,0 +1,13 @@
+set spoolfile = +"fale/INBOX"
+set mbox = +"fale/Trash"
+set postponed = +"fale/Drafts"
+set from=me@fale.io
+set sendmail="/usr/bin/msmtp -a fale"
+set realname = "Fabio Alessandro Locati"
+set signature = ~/.mutt/fale_sig
+
+#macro index,pager a <save-message>+redhat/archive<enter><quasi-delete>
+#macro index,pager A <tag-subthread><tag-prefix-cond><save-message>+redhat/archive<enter><enter><tag-prefix-cond><quasi-delete><untag-pattern>.*
+#macro index,pager a <tag-entry><tag-prefix-cond><save-message>+redhat/archive<enter><enter><tag-prefix-cond><quasi-delete><untag-pattern>.*
+#macro index D "<save-message>+[Gmail]/Trash<enter>" "move message to the trash"
+#macro index S "<save-message>+[Gmail]/Spam<enter>" "mark message as spam"

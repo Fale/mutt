@@ -3,6 +3,8 @@ set mbox = +"gmail/[Gmail].All Mail"
 set postponed = +"gmail/[Gmail].Drafts"
 set from=fabiolocati@gmail.com
 set sendmail="/usr/bin/msmtp -a gmail"
+set realname = "Fabio Alessandro Locati"
+set signature = ~/.mutt/gmail_sig
 
 macro index,pager A <tag-subthread><tag-prefix-cond><save-message>+gmail/archive<enter><enter><tag-prefix-cond><quasi-delete><untag-pattern>.*
 macro index,pager a <tag-entry><tag-prefix-cond><save-message>+gmail/archive<enter><enter><tag-prefix-cond><quasi-delete><untag-pattern>.*
