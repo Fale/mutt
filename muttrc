@@ -64,12 +64,15 @@ mailboxes = +"redhat/FAB-list"
 mailboxes = +"redhat/Fedora-Commops"
 mailboxes = +"redhat/Fedora-Devel"
 mailboxes = +"redhat/Fedora-Devel-Announcements"
+mailboxes = +"redhat/Fedora-Doc-FOL"
+mailboxes = +"redhat/Fedora-Docker"
 mailboxes = +"redhat/Fedora-Flock-Atendees"
 mailboxes = +"redhat/Fedora-Flock-Speakers"
 mailboxes = +"redhat/Fedora-G11N"
 mailboxes = +"redhat/Fedora-G11N-IT"
 mailboxes = +"redhat/Fedora-Infra"
 mailboxes = +"redhat/Fedora-Marketing"
+mailboxes = +"redhat/Fedora-Packaging"
 mailboxes = +"redhat/LCY-list"
 mailboxes = +"redhat/MEMO"
 mailboxes = +"redhat/RHEV-tech"
@@ -79,10 +82,8 @@ mailboxes = +"redhat/UKI-Consulting"
 mailboxes = +"redhat/UKI-list"
 mailboxes = +"redhat/UKI-Services"
 
-macro index D \
-    "<save-message>+[Gmail]/Trash<enter>" \
-    "move message to the trash"
+folder-hook +fale/.* "source ~/.mutt/fale"
+folder-hook +gmail/.* "source ~/.mutt/gmail"
+folder-hook +redhat/.* "source ~/.mutt/redhat"
 
-macro index S \
-    "<save-message>+[Gmail]/Spam<enter>" \
-    "mark message as spam"
+set nm_default_uri = "notmuch:///home/fale/.mail"
